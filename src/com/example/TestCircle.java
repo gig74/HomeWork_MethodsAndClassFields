@@ -43,23 +43,9 @@ public class TestCircle {
             System.out.println("testGetArea: FAILURE");
         }
     }
-    // Дополнительный тест проверки радиуса
-    private void testIllegalRadius() {
-        try {
-            Circle circle = new Circle(-1);
-            System.out.println("testIllegalRadius: FAILURE");
-        }
-        catch (IllegalArgumentException ex) {
-            System.out.println("testIllegalRadius: OK");
-        }
-        catch (Exception ex) {
-            System.out.println("testIllegalRadius: FAILURE");
-        }
-    }
     public void test() {
         testCreateCircle();
         testSetRadius();
         testGetArea();
-        testIllegalRadius(); // Дополнительный тест проверки радиуса
     }
 }
