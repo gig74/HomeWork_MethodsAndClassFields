@@ -43,9 +43,22 @@ public class TestCircle {
             System.out.println("testGetArea: FAILURE");
         }
     }
+
+    private void testSetNegativeRadius() {
+        try {
+            Circle circle = new Circle(-1);
+            System.out.println("testSetNegativeRadius: FAILURE");
+        } catch (IllegalArgumentException ex) {
+            System.out.println("testSetNegativeRadius: OK");
+        } catch (Exception ex) {
+            System.out.println("testSetNegativeRadius: FAILURE");
+        }
+    }
+
     public void test() {
         testCreateCircle();
         testSetRadius();
         testGetArea();
+        testSetNegativeRadius();
     }
 }
